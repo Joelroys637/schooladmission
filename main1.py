@@ -8,7 +8,20 @@ import header_menu_remove as hedremove
 import smtplib
 import home
 import result as res
+from pathlib import Path
 
+# Load the background image from the 'static' folder
+bg_image = Path("static/location.png")
+if bg_image.exists():
+    bg_style = f"""
+    <style>
+    .stApp {{
+        background: url('{bg_image.as_posix()}');
+        background-size: cover;
+    }}
+    </style>
+    """
+    st.markdown(bg_style, unsafe_allow_html=True)
 
 #remove the header bar in streamlit
 hedremove.headerhide()
