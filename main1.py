@@ -15,7 +15,7 @@ def get_base64_image(file_path):
         data = f.read()
     return base64.b64encode(data).decode()
 
-bg_image_base64 = get_base64_image("location.png")
+bg_image_base64 = get_base64_image("bg1.png")
 
 bg_style = f"""
 <style>
