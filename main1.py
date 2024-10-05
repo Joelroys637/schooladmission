@@ -21,7 +21,9 @@ bg_style = f"""
 <style>
 .stApp {{
     background-image: url("data:image/png;base64,{bg_image_base64}");
-    background-size: cover;
+     background-size: 100vw 100vh;  # This sets the size to cover 100% of the viewport width and height
+    background-position: center;  
+    background-repeat: no-repeat;
 }}
 </style>
 """
